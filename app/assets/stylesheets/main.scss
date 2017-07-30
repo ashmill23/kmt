@@ -1,0 +1,138 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$dark-teal: #006c6d;
+
+body {
+	font-family: "Open Sans";
+	color: #585551;
+}
+
+.logo {
+	font-size: 39px;
+	text-shadow: rgba(0, 0, 0, 0.298039) 0px 5px 0px;
+	font-weight: bold;
+	width: 200px;
+	position: relative;
+}
+
+.trademark {
+	color: rgb(69, 186, 1);
+	text-shadow: none;
+	position: absolute;
+	font-size: 24px;
+	right: 15px;
+  top: 5px;
+}
+
+.sub-logo {
+	font-size: 15px;
+}
+
+
+.header {
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+.header-nav {
+	background-color: rgba(0, 149, 145, 1);
+	width: 100%;
+	height: 30px;
+	margin-top: 5px;
+
+	.links{
+		float: right;
+		line-height: 30px;
+
+		a {
+			font-size: 18px;
+			color: white;
+			font-weight: 300;
+			font-family: "open sans condensed", sans-serif;
+			padding: 3px 10px;
+
+			&:hover {
+				text-decoration: none;
+				background-color: rgba(0, 108, 109, 1);
+				cursor: pointer;
+			}
+		}
+	}
+
+	&:before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 15px;
+    border-top: 10px solid $dark-teal;
+    border-left: 10px solid transparent;
+	}
+
+	&:after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    border-top: 10px solid $dark-teal;
+    border-right: 10px solid transparent;
+	}
+}
+
+.panel-section {
+	background-color: ghostwhite;
+}
+
+.panels {
+	background: url('womanonphone.jpeg') no-repeat;
+	background-size: cover;
+	height: 500px;
+	margin-top: 50px;
+
+	.panel {
+		float: left;
+    width: 25%;
+    height: 500px;
+    top: -2px;
+    background: transparent;
+    border: 7px solid ghostwhite;
+    border-radius: 0;
+
+    .banner {
+    	height: 70px;
+    	font-family: 'Amatic SC', cursive;
+    	color: white;
+	    background-color: $dark-teal;
+	    margin-right: 10px;
+    	position: relative;
+    	font-size: 18px;
+    	top: 350px;
+    	line-height: 70px;
+
+    	img {
+    		height: 50px;
+    		margin-left: 20px;
+    	}
+
+    	span {
+    		float: right;
+    		margin-right: 30px;
+    	}
+    	
+	    &:after {
+	    	content: '';
+		    background: linear-gradient(45deg, #006c6d 5px, transparent 0) 0 17px, linear-gradient(135deg, #006c6d 5px, transparent 0) 0 5px;
+		    background-color: transparent;
+		    background-position: left top;
+		    background-repeat: repeat-y;
+		    background-size: 10px 10px;
+		    height: 70px;
+		    width: 10px;
+		    position: absolute;
+		    display: block;
+		    right: -10px;
+		    top: 0;
+	    }
+    }
+	}
+}
