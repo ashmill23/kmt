@@ -30,5 +30,6 @@ module Kmt
     # config.i18n.default_locale = :de
 
     config.serve_static_assets = true
+    config.assets.compile = true
   end
 end
