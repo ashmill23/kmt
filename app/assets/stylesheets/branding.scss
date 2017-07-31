@@ -1,0 +1,73 @@
+$bubble-green: rgba(69, 186, 1, 1);
+
+.branding {
+
+	.bubble {
+		background-color: $bubble-green;
+		color: white;
+		font-size: 24px;
+		font-weight: lighter;
+    text-align: center;
+    width: 440px;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0px;
+
+    p {
+    	margin: 0 auto;
+    	width: 250px;
+    	margin-bottom: 20px;
+    }
+
+    .bar {
+    	height: 1px;
+    	width: 75px;
+    	background-color: white;
+    	margin: 10px auto 20px auto;
+    }
+
+    .credit {
+    	font-size: 12px;
+    }
+
+    &:before {
+    	content: '';
+	    height: 75px;
+	    width: 150px;
+	    top: -75px;
+	    background-color: $bubble-green;
+	    position: absolute;
+	    margin-left: -75px;
+	    background-color: linear-gradient;
+	    border-top-left-radius: 150px;
+	    border-top-right-radius: 150px;
+	    background-image: url(image_path('wifi.png'));
+	    background-size: 60px;
+	    background-repeat: no-repeat;
+	    background-position: center;
+    }
+	}
+
+	.caption {
+		font-size: 14px;
+		float: right;
+		margin-top: 20px;
+		width: 300px;
+		color: #848079;
+		margin-right: 150px;
+	}
+
+	.section-1 {
+		background-image: url(image_path('womanonphone.jpeg'));
+		background-size: cover;
+		padding-top: 200px;
+		padding-bottom: 40px;
+	}
+
+	.section-2 {
+		background-image: url(image_path('keyboard.jpeg'));
+		background-size: cover;
+		padding-top: 200px;
+		padding-bottom: 40px;
+	}
+}
