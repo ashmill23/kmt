@@ -79,60 +79,35 @@ body {
 	}
 }
 
-.panel-section {
-	background-color: ghostwhite;
-}
+@media screen and (max-width: 768px) {
+	
+	.header {
+	  margin-top: 20px;
+    margin-bottom: 30px;
+  }
 
-.panels {
-	background: url('womanonphone.jpeg') no-repeat;
-	background-size: cover;
-	height: 500px;
-	margin-top: 50px;
+	.header-nav {
+		margin-top: 20px;
 
-	.panel {
-		float: left;
-    width: 25%;
-    height: 500px;
-    top: -2px;
-    background: transparent;
-    border: 7px solid ghostwhite;
-    border-radius: 0;
-
-    .banner {
-    	height: 70px;
-    	font-family: 'Amatic SC', cursive;
-    	color: white;
-	    background-color: $dark-teal;
-	    margin-right: 10px;
-    	position: relative;
-    	font-size: 18px;
-    	top: 350px;
-    	line-height: 70px;
-
-    	img {
-    		height: 50px;
-    		margin-left: 20px;
-    	}
-
-    	span {
-    		float: right;
-    		margin-right: 30px;
-    	}
-    	
-	    &:after {
-	    	content: '';
-		    background: linear-gradient(45deg, #006c6d 5px, transparent 0) 0 17px, linear-gradient(135deg, #006c6d 5px, transparent 0) 0 5px;
-		    background-color: transparent;
-		    background-position: left top;
-		    background-repeat: repeat-y;
-		    background-size: 10px 10px;
-		    height: 70px;
-		    width: 10px;
-		    position: absolute;
-		    display: block;
-		    right: -10px;
-		    top: 0;
-	    }
-    }
+		.links {
+			float: none;
+		}
 	}
+
+	.header-nav:after, .header-nav:before {
+		top: 30px;
+	}
+
+	.logo {
+    font-size: 30px;
+  }
+
+  .trademark {
+  	font-size: 20px;
+    right: 50px;
+  }
+
+  .sub-logo {
+    font-size: 12px;
+	}	
 }
