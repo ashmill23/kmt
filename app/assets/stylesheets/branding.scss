@@ -1,6 +1,13 @@
 $bubble-green: rgba(69, 186, 1, 1);
 
 .branding {
+	background-color: ghostwhite;
+	padding-bottom: 50px;
+
+	.branding-header {
+		margin: 30px 0px 20px 0px;
+		font-size: 26px;
+	}
 
 	.bubble {
 		background-color: $bubble-green;
@@ -15,7 +22,7 @@ $bubble-green: rgba(69, 186, 1, 1);
 
     p {
     	margin: 0 auto;
-    	width: 250px;
+    	width: 350px;
     	margin-bottom: 20px;
     }
 
@@ -41,7 +48,6 @@ $bubble-green: rgba(69, 186, 1, 1);
 	    background-color: linear-gradient;
 	    border-top-left-radius: 150px;
 	    border-top-right-radius: 150px;
-	    background-image: url(image_path('wifi.png'));
 	    background-size: 60px;
 	    background-repeat: no-repeat;
 	    background-position: center;
@@ -58,10 +64,14 @@ $bubble-green: rgba(69, 186, 1, 1);
 	}
 
 	.section-1 {
-		background-image: url(image_path('womanonphone.jpeg'));
+		background-image: url(image_path('city.JPG'));
 		background-size: cover;
 		padding-top: 200px;
 		padding-bottom: 40px;
+
+		.bubble:before {
+			background-image: url(image_path('wifi.png'));
+		}
 	}
 
 	.section-2 {
@@ -69,5 +79,32 @@ $bubble-green: rgba(69, 186, 1, 1);
 		background-size: cover;
 		padding-top: 200px;
 		padding-bottom: 40px;
+
+		.bubble:before {
+			background-image: url(image_path('chat.png'));
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.branding .caption {
+		float: none;
+		margin: 30px auto 0 auto;
+		text-align: center;
+	}
+
+	.branding .section-1, .branding .section-2 {
+		padding-top: 125px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.branding .bubble {
+		font-size: 18px;
+		width: 300px;
+
+		p {
+			width: 250px;
+		}
 	}
 }
