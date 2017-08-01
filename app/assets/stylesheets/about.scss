@@ -1,0 +1,75 @@
+$bubble-teal: rgba(69, 186, 1, 1);
+
+.about {
+	background-color: ghostwhite;
+	padding-bottom: 50px;
+
+	.about-header, .contact-header {
+		margin: 30px 0px 20px 0px;
+		font-size: 26px;
+		color: #585551;
+	}
+
+	.contact-header {
+		border-bottom: 1px solid rgba(181, 177, 169, 0.8);
+		padding-bottom: 0px;
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+
+	.content {
+		text-align: center;
+		border-top: 1px solid rgba(181, 177, 169, 0.8);
+		border-bottom: 1px solid rgba(181, 177, 169, 0.8);
+		padding: 30px 50px;
+		color: #848079;
+	}
+
+	.contact-image {
+		background-image: url(image_path('people.JPG'));
+		background-size: cover;
+		background-position: center;
+		height: 300px;
+		margin-bottom: 70px;
+
+		.bubble {
+			background-color: #006c6d;
+			color: white;
+			margin: 0 auto;
+			font-size: 24px;
+			width: 380px;
+			padding: 15px 30px;
+			text-align: center;
+			font-weight: lighter;
+			border-radius: 15px 15px 0 0;
+			position: relative;
+			top: 100px;
+		}
+	}
+
+	form {
+		input {
+			width: 100%;
+    	padding: 6px;
+    	margin: 2px 0px;
+    	border: 1px solid #D3D3D3;
+		}
+
+		textarea {
+			margin: 2px 0px;
+    	height: 110px;
+    	border: 1px solid #D3D3D3;
+    	width: 100%;
+		}
+
+		.submit {
+			width: 50px;
+			height: 30px;
+			padding: 0;
+			background-color: rgba(69, 186, 1, 1);
+			color: white;
+			float: right;
+			border: none;
+		}
+	}
+}
