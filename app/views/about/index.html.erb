@@ -22,18 +22,16 @@
 
 		<div class='row'>
 			<div class='col-sm-6'>
-				<form>
-					<div class='row'>
-						<div class='col-sm-6'>
-						  <input type="text" name="name" placeholder="Name">
-						  <br>
-						  <input type="text" name="email" placeholder="Email">
-						  <br>
-						  <input type="text" name="subject" placeholder="Subject">
-						</div>
-						<div class='col-sm-6'>
-						  <textarea rows="50" name="message" placeholder="Message"></textarea>
-						</div>
+				<form action="/about/contact" id='contact-form'>
+					<div class='col-sm-6'>
+					  <input type="text" name="name" placeholder="Name" required>
+					  <br>
+					  <input type="text" name="email" placeholder="Email" required>
+					  <br>
+					  <input type="text" name="subject" placeholder="Subject" required>
+					</div>
+					<div class='col-sm-6'>
+					  <textarea rows="50" name="message" placeholder="Message" required></textarea>
 					</div>
 					<div class='row'>
 						<div class='col-sm-12'>
@@ -43,10 +41,57 @@
 				</form>
 			</div>
 			<div class='col-sm-3'>
+				<div class='logo'>KMT Hub
+					<sup class='trademark'>®</sup>
+				</div>
+				<div class='sub-logo'>
+					Technology Consultant
+				</div>
 			</div>
 			<div class='col-sm-3'>
+				<div class='contact-snippet contact-nums'>
+					Tel: 858-386-2855
+					<br/>
+					Email: kmiller@kmthub.com
+				</div>
+				<div class='contact-break'></div>
+				<div class='contact-snippet'>
+					Nationwide Networking
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class='col-md-2'></div>
 </div>
+
+<div id="dialog" class='dialog' title="Thank you!">
+  <p></p>
+</div>
+
+<script>
+	$(function() {
+		$( "#dialog" ).dialog({
+		  autoOpen: false,
+		  open: function(event, ui) {
+        setTimeout(function(){
+            $('#dialog').dialog('close');                
+        }, 5000);
+    	}
+		});
+
+		$("#contact-form").submit(function(e) {
+	    $.ajax({
+        type: "GET",
+        url: "/about/contact",
+        data: $("#contact-form").serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+          $('#dialog p').text('Your information has been submitted and we will get back to you soon!');
+    			$('#dialog').dialog( "open" );
+        }
+      });
+
+	    e.preventDefault(); // avoid to execute the actual submit of the form.
+		});
+	});
+</script>

@@ -79,6 +79,42 @@ body {
 	}
 }
 
+.footer {
+	margin: 10px 0px;
+
+	.logo {
+		font-size: 28px;
+	}
+
+	.trademark {
+		font-size: 18px;
+		right: 60px;
+	}
+
+	.sub-logo {
+		font-size: 12px;
+	}
+
+	.links{
+		float: right;
+		line-height: 55px;
+
+		a {
+			font-size: 16px;
+			font-weight: 300;
+			font-family: "open sans condensed", sans-serif;
+			padding: 3px 10px;
+			color: #585551;
+
+			&:hover {
+				text-decoration: none;
+				color: rgba(0, 149, 145, 1);
+				cursor: pointer;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 768px) {
 	
 	.header {
@@ -110,4 +146,21 @@ body {
   .sub-logo {
     font-size: 12px;
 	}	
+
+	.footer {
+		text-align: center;
+
+		.trademark {
+			right: 25px;
+		}
+		
+		.logo {
+			margin: 0 auto;
+		}
+
+		.links {
+			float: none;
+			line-height: 50px;
+		}
+	}
 }

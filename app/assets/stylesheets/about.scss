@@ -1,7 +1,7 @@
 $bubble-teal: rgba(69, 186, 1, 1);
 
 .about {
-	background-color: ghostwhite;
+	background-color: #F8F8F8;
 	padding-bottom: 50px;
 
 	.about-header, .contact-header {
@@ -62,6 +62,10 @@ $bubble-teal: rgba(69, 186, 1, 1);
     	width: 100%;
 		}
 
+		.col-sm-6 {
+			padding: 2px;
+		}
+
 		.submit {
 			width: 50px;
 			height: 30px;
@@ -71,5 +75,53 @@ $bubble-teal: rgba(69, 186, 1, 1);
 			float: right;
 			border: none;
 		}
+	}
+
+	.logo {
+		margin-top: 20px;
+	}
+}
+
+.contact-snippet {
+	color: rgba(69,186,1,1);
+	font-family: enriqueta;
+	font-size: 14px;
+}
+
+.contact-nums {
+	margin-top: 15px;
+}
+
+.contact-break {
+	background-color: rgba(69,186,1,1);
+	height: 1px;
+	width: 100px;
+	margin: 10px 0px;
+}
+
+.ui-dialog-titlebar.ui-widget-header {
+	border: none;
+	background: none;
+	background-color: rgba(69, 186, 1, 1);
+	color: white;
+	font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+	.about .logo, .about .sub-logo {
+		display:none;
+	}
+
+	.contact-snippet {
+		text-align: center;
+	}
+
+	.contact-break {
+		margin: 10px auto;
+	}
+
+	.about .contact-image .bubble {
+		width: 300px;
+    font-size: 20px;
 	}
 }

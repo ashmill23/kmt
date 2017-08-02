@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   get 'branding' => 'branding#index'
   get 'about' => 'about#index'
+  get 'about/contact' => 'about#contact'
 
 end
