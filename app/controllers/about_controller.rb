@@ -5,7 +5,11 @@ class AboutController < ApplicationController
   end
 
   def contact
-  	ContactMailer.welcome(params[:name], params[:email], params[:subject], params[:message]).deliver_now
-  	render :json => { :success => true }
+  	begin
+  		ContactMailer.welcome(params[:name], params[:email], params[:subject], params[:message]).deliver_now
+  		render :json => { :success => true }
+  	rescue StandardError => e
+  		render :json => { :error => e }
+  	end
   end
 end

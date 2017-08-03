@@ -84,9 +84,14 @@
         data: $("#contact-form").serialize(), // serializes the form's elements.
         success: function(data)
         {
-          $('#dialog p').text('Your information has been submitted and we will get back to you soon!');
-    			$('#dialog').dialog( "open" );
+        	if (data.success == true) {
+	          $('#dialog p').text('Your information has been submitted and we will get back to you soon!');
+	    			$('#dialog').dialog( "open" );
+	    		}	else {
+	    			console.log(data.error)
+	    		}
         }
+
       });
 
 	    e.preventDefault(); // avoid to execute the actual submit of the form.
