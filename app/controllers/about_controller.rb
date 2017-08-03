@@ -9,7 +9,7 @@ class AboutController < ApplicationController
   		ContactMailer.welcome(params[:name], params[:email], params[:subject], params[:message]).deliver_now
   		render :json => { :success => true }
   	rescue StandardError => e
-  		render :json => { :error => e }
+  		render :json => { :error => e.to_s }
   	end
   end
 end
