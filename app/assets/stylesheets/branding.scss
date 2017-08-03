@@ -108,3 +108,9 @@ $bubble-green: rgba(69, 186, 1, 1);
 		}
 	}
 }
+
+@media screen and (max-width: 320px) {
+	.branding .bubble {
+		width: 260px;
+	}
+}

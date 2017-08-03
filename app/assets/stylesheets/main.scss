@@ -14,6 +14,14 @@ body {
 	font-weight: bold;
 	width: 200px;
 	position: relative;
+
+	a {
+		color: #585551;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 .trademark {
@@ -27,6 +35,14 @@ body {
 
 .sub-logo {
 	font-size: 15px;
+
+	a {
+		color: #585551;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 
@@ -153,7 +169,7 @@ body {
 		.trademark {
 			right: 25px;
 		}
-		
+
 		.logo {
 			margin: 0 auto;
 		}

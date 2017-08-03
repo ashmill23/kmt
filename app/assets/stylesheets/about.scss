@@ -107,6 +107,10 @@ $bubble-teal: rgba(69, 186, 1, 1);
 	font-weight: lighter;
 }
 
+.ui-button .ui-button-text {
+	display: none !important;
+}
+
 @media screen and (max-width: 768px) {
 	.about .logo, .about .sub-logo {
 		display:none;
@@ -120,8 +124,19 @@ $bubble-teal: rgba(69, 186, 1, 1);
 		margin: 10px auto;
 	}
 
+	.about .contact-image {
+		margin-bottom: 30px;
+
+		.bubble {
+			width: 300px;
+	    font-size: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
 	.about .contact-image .bubble {
-		width: 300px;
-    font-size: 20px;
+		width: 260px;
+    font-size: 18px;
 	}
 }
